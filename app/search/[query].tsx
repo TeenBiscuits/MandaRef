@@ -1,4 +1,4 @@
-import ClotheCard, { ClothesInfo } from "@/components/ClotheCard";
+import ClotheCard from "@/components/ClotheCard";
 import EmptyState from "@/components/EmptyState";
 import SearchInput from "@/components/SearchInput";
 import { useLocalSearchParams } from "expo-router";
@@ -12,94 +12,27 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { images } from "../../constants";
+import { images, mocks } from "../../constants";
 
 const Search = () => {
   const { query } = useLocalSearchParams();
-  const data: ClothesInfo[] = [
-    {
-      id: "fasfasg",
-      name: "GEOMETRIC JACQUARD SHIRT",
-      price: {
-        currency: "EUR",
-        value: {
-          current: 29.95,
-        },
-      },
-      link: "https://www.zara.com/es/en/geometric-jacquard-shirt-p01618475.html?v1=367022517",
-      brand: "zara",
-    },
-    {
-      id: "fasfaga",
-      name: "GEOMETRIC JACQUARD SHIRT",
-      price: {
-        currency: "EUR",
-        value: {
-          current: 29.95,
-        },
-      },
-      link: "https://www.zara.com/es/en/geometric-jacquard-shirt-p01618475.html?v1=367022518",
-      brand: "zara",
-    },
-    {
-      id: "asfasf",
-      name: "GEOMETRIC JACQUARD SHIRT",
-      price: {
-        currency: "EUR",
-        value: {
-          current: 29.95,
-        },
-      },
-      link: "https://www.zara.com/es/en/geometric-jacquard-shirt-p01618475.html?v1=367022519",
-      brand: "zara",
-    },
-    {
-      id: "gsgsdgsd",
-      name: "GEOMETRIC JACQUARD SHIRT",
-      price: {
-        currency: "EUR",
-        value: {
-          current: 29.95,
-        },
-      },
-      link: "https://www.zara.com/es/en/geometric-jacquard-shirt-p01618475.html?v1=367022519",
-      brand: "zara",
-    },
-    {
-      id: "safasf",
-      name: "GEOMETRIC JACQUARD SHIRT",
-      price: {
-        currency: "EUR",
-        value: {
-          current: 29.95,
-        },
-      },
-      link: "https://www.zara.com/es/en/geometric-jacquard-shirt-p01618475.html?v1=367022519",
-      brand: "zara",
-    },
-  ];
-  const data2 = [];
+
   const isWeb = Platform.OS === "web";
   const isLoading = false;
+
   return (
     <>
-      {isWeb ? (
-        <Image
-          source={images.desert}
-          resizeMode="cover"
-          style={{ position: "absolute", width: "100%", height: "100%" }}
-        />
-      ) : (
-        <Image
-          source={images.desert}
-          resizeMode="cover"
-          className="absolute w-full h-full"
-        />
-      )}
+      <Image
+        source={images.desert}
+        resizeMode="cover"
+        className="absolute w-full h-full"
+        style={isWeb && { position: "absolute", width: "100%", height: "100%" }}
+      />
+
       <SafeAreaView className="h-full" edges={["top"]}>
         <FlatList
           className="flex w-full h-full mt-10 p-6 bg-white rounded-t-3xl"
-          data={data}
+          data={mocks.data}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => <ClotheCard clothe={item} />}
           ItemSeparatorComponent={() => <View className="h-8" />}

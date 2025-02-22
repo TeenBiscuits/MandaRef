@@ -1,3 +1,4 @@
+import { GlobalProvider } from "@/context/GlobalProvider";
 import "@/global.css";
 import { useFonts } from "expo-font";
 import * as NavigationBar from "expo-navigation-bar";
@@ -25,13 +26,13 @@ export default function RootLayout() {
   NavigationBar.setButtonStyleAsync("dark");
 
   return (
-    <>
+    <GlobalProvider>
       <StatusBar style="dark" />
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="not-found" options={{ headerShown: false }} />
         <Stack.Screen name="search/[query]" options={{ headerShown: false }} />
       </Stack>
-    </>
+    </GlobalProvider>
   );
 }

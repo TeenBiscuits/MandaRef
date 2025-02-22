@@ -1,3 +1,4 @@
 import icons from "./icons";
 import images from "./images";
-export { icons, images };
+import mocks from "./mocks";
+export { icons, images, mocks };
