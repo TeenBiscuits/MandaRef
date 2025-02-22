@@ -1,8 +1,10 @@
 import "@/global.css";
 import { useFonts } from "expo-font";
+import * as NavigationBar from "expo-navigation-bar";
 import { SplashScreen, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
+
 export default function RootLayout() {
   const [fontsLoaded, error] = useFonts({
     "Poppins-Black": require("../assets/fonts/Poppins-Black.ttf"),
@@ -19,6 +21,8 @@ export default function RootLayout() {
     if (error) throw error;
     if (fontsLoaded) SplashScreen.hideAsync();
   }, [fontsLoaded, error]);
+  NavigationBar.setVisibilityAsync("hidden");
+  NavigationBar.setButtonStyleAsync("dark");
 
   return (
     <>
