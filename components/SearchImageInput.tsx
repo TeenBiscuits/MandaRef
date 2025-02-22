@@ -1,3 +1,4 @@
+import { FontAwesome } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { ImagePickerSuccessResult } from "expo-image-picker";
 import React from "react";
@@ -21,8 +22,8 @@ const SearchImageInput = () => {
 
   return (
     <TouchableOpacity
-      className=" w-full h-16 px-4 bg-white rounded-2xl
-       focus:border-sky-700 items-center flex-row space-x-4 text-black-200 "
+      className=" w-full h-16 px-4 bg-[#1e293b] rounded-2xl
+       focus:border-sky-700 items-center justify-between flex-row space-x-4 text-black-200 "
       style={{
         elevation: 7,
         shadowColor: "#000",
@@ -31,9 +32,14 @@ const SearchImageInput = () => {
         shadowRadius: 3.84,
       }}
     >
-      <Text className="text-base text-gray-100 font-pmedium">
-        Upload an image for search clothes
+      <Text
+        className="text-base text-slate-300 font-pmedium overflow-hidden"
+        numberOfLines={1}
+        ellipsizeMode="tail"
+      >
+        Upload an image to search clothes
       </Text>
+      <FontAwesome name="upload" size={20} color="#94a3b8" />
     </TouchableOpacity>
   );
 };

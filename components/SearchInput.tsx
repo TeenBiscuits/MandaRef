@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Alert, Image, TextInput, TouchableOpacity, View } from "react-native";
 
 import { router, usePathname } from "expo-router";
@@ -10,6 +10,8 @@ interface SearchInputProps {
 const SearchInput: FC<SearchInputProps> = ({ initialQuery }) => {
   const pathname = usePathname();
   const [query, setQuery] = useState<string>(initialQuery ?? "");
+
+  useEffect(() => {}, [query]);
   return (
     <View
       className=" w-full h-16 px-4 bg-white rounded-2xl
@@ -44,7 +46,7 @@ const SearchInput: FC<SearchInputProps> = ({ initialQuery }) => {
         <Image
           source={icons.search}
           className="w-5 h-5 "
-          tintColor={"#000"}
+          tintColor={"#94a3b8"}
           resizeMode="contain"
         />
       </TouchableOpacity>

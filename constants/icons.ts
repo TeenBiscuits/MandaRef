@@ -10,6 +10,7 @@ import like from "../assets/icons/like.png";
 import likeFull from "../assets/icons/likeFull.png";
 import logout from "../assets/icons/logout.png";
 import menu from "../assets/icons/menu.png";
+import notFound from "../assets/icons/notFound.png";
 import play from "../assets/icons/play.png";
 import plus from "../assets/icons/plus.png";
 import profile from "../assets/icons/profile.png";
@@ -36,4 +37,5 @@ export default {
   likeFull,
   bookmarkVideo,
   bookmarkVideoFull,
+  notFound,
 };
