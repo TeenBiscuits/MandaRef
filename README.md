@@ -2,6 +2,15 @@
 
 # <img src="https://raw.githubusercontent.com/TeenBiscuits/MandaRef/refs/heads/main/assets/images/icon.png" alt="" align="left" width="40" height="40"> **MandaRef**
 
+[![React](https://img.shields.io/badge/React_Native-20232A?logo=react&logoColor=61DAFB)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Expo-1B1F23?logo=expo&logoColor=white)](https://expo.dev/)
+[![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Inditex-API](https://img.shields.io/badge/Inditex_API-black?logo=zara&logoColor=white)](https://developer.inditex.com/)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE.md)
+[![Stars](https://img.shields.io/github/stars/TeenBiscuits/MandaRef.svg)](https://github.com/TeenBiscuits/MandaRef)
+
+
 > ¿Buscando una prenda 💅🏻🛍️💕 y no sabes la referencia 😭? Con una descripción o una simple captura la tienes 🤩😎.
 
 El presente proyecto surge de la idea de que los usuarios, puedan encontrar la ropa que ven en un vídeo de Tik Tok o cualquier otra red social, tan solo con una captura de pantalla o buscando por texto con una descripción ded lo que quieren. 
