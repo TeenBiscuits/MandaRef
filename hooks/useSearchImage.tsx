@@ -14,6 +14,7 @@ export const useSearchImage: FC<UseInditexProps> = ({
     queryKey: ["repoData", image, page, pageSize],
     queryFn: async () => {
       const token = "TOKEN_GOES_HERE";
+
       const url = `https://api.inditex.com/pubvsearch/products?image=${image}&page=${page}&perPage=${pageSize}`;
       console.log(url);
       const response = await fetch(url, {
