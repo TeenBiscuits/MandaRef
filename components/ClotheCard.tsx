@@ -1,6 +1,6 @@
 import { useGlobalContext } from "@/hooks/useGlobalContext";
 import { FontAwesome } from "@expo/vector-icons";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+
 import React, { FC } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { images } from "../constants";
@@ -27,7 +27,7 @@ export interface FavouritesClothes {
   clothesFavourites: ClothesInfo[];
 }
 const ClotheCard: FC<ClotheCardProps> = ({ clothe, saved }) => {
-  const { setFavouritesClothes } = useGlobalContext();
+  const { favouritesClothes, setFavouritesClothes } = useGlobalContext();
   const getImageBrand = () => {
     switch (clothe.brand) {
       case Brands.zara:
@@ -49,31 +49,14 @@ const ClotheCard: FC<ClotheCardProps> = ({ clothe, saved }) => {
     }
   };
   const handleOnClick = async () => {
-    const storeData = await AsyncStorage.getItem("clothesFavourites");
-    console.log("hola ", storeData);
-    if (storeData === null) {
-      const jsonNewClothesFavourites = JSON.stringify({
-        clothesFavourites: [clothe],
-      });
-      await AsyncStorage.setItem(
-        "clothesFavourites",
-        JSON.stringify(jsonNewClothesFavourites),
+    if (saved) {
+      setFavouritesClothes(
+        favouritesClothes.filter((item) => item.id !== clothe.id),
       );
-      setFavouritesClothes([clothe]);
       return;
     }
-    const favourites: FavouritesClothes = storeData
-      ? JSON.parse(storeData)
-      : [];
-    favourites.clothesFavourites.push(clothe);
-    console.log("favoritos", favourites);
-    const jsonNewClothesFavourites = JSON.stringify(favourites);
-    console.log("json", jsonNewClothesFavourites);
-    await AsyncStorage.setItem(
-      "clothesFavourites",
-      JSON.stringify(jsonNewClothesFavourites),
-    );
-    setFavouritesClothes(favourites.clothesFavourites);
+    const newFavouritesClothes = [...favouritesClothes, clothe];
+    setFavouritesClothes(newFavouritesClothes);
   };
   const imageBrand = getImageBrand();
   const getDiscount =
@@ -93,8 +76,12 @@ const ClotheCard: FC<ClotheCardProps> = ({ clothe, saved }) => {
       }}
     >
       <View className="relative flex-row justify-between items-center">
-        <View className=" w-full flex-row flex-wrap justify-between">
-          <Text className="text-xl font-pbold text-slate-800 ">
+        <View className=" w-full flex-row flex-nowrap justify-between">
+          <Text
+            className="text-xl w-3/4 font-pbold text-slate-800  overflow-auto"
+            numberOfLines={2}
+            ellipsizeMode="tail"
+          >
             {clothe.name}
           </Text>
           <View className="flex-row gap-2">

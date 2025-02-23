@@ -1,13 +1,20 @@
 import SearchImageInput from "@/components/SearchImageInput";
 import SearchInput from "@/components/SearchInput";
-import { Image, Platform, Text, View } from "react-native";
+import {
+  Image,
+  KeyboardAvoidingView,
+  Platform,
+  Text,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "../../constants";
+
 export default function HomeScreen() {
   const platform = Platform.OS;
-  const isIos = platform === "ios";
-  const isAndroid = platform === "android";
+
   const isWeb = platform === "web";
+
   return (
     <>
       {isWeb ? (
@@ -23,6 +30,7 @@ export default function HomeScreen() {
           className="absolute w-full h-full"
         />
       )}
+      <KeyboardAvoidingView></KeyboardAvoidingView>
       <SafeAreaView className="flex-1 w-full h-full p-6 ">
         <View className="flex w-full min-h-20 flex-nowrap  mt-14 ">
           <Text

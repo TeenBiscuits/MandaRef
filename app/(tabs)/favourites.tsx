@@ -11,7 +11,7 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { images, mocks } from "../../constants";
+import { images } from "../../constants";
 
 const Favourites = () => {
   const { favouritesClothes } = useGlobalContext();
@@ -31,7 +31,7 @@ const Favourites = () => {
       <SafeAreaView className="h-full" edges={["top"]}>
         <FlatList
           className="flex w-full h-full mt-10 p-6 bg-white rounded-t-3xl"
-          data={mocks.data}
+          data={favouritesClothes}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => {
             if (favouritesClothes.includes(item))

@@ -1,5 +1,6 @@
 import { GlobalProvider } from "@/context/GlobalProvider";
 import "@/global.css";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useFonts } from "expo-font";
 import * as NavigationBar from "expo-navigation-bar";
 import { SplashScreen, Stack } from "expo-router";
@@ -24,15 +25,22 @@ export default function RootLayout() {
   }, [fontsLoaded, error]);
   NavigationBar.setVisibilityAsync("hidden");
   NavigationBar.setButtonStyleAsync("dark");
+  const queryClient = new QueryClient();
 
   return (
-    <GlobalProvider>
-      <StatusBar style="dark" />
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="not-found" options={{ headerShown: false }} />
-        <Stack.Screen name="search/[query]" options={{ headerShown: false }} />
-      </Stack>
-    </GlobalProvider>
+    <QueryClientProvider client={queryClient}>
+      <GlobalProvider>
+        <StatusBar style="dark" />
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="not-found" options={{ headerShown: false }} />
+          <Stack.Screen name="viewClothes" options={{ headerShown: false }} />
+          <Stack.Screen
+            name="search/[query]"
+            options={{ headerShown: false }}
+          />
+        </Stack>
+      </GlobalProvider>
+    </QueryClientProvider>
   );
 }
