@@ -72,7 +72,11 @@ Para ello, lo podremos hacer directamente desde la interfaz de GitHub o por lín
 	git clone https://github.com/TeenBiscuits/MandaRef.git
 ```
 
-**4. Arrancar la aplicación:**
+**4. API Key:**
+
+En los archivos de la carpeta [`/hooks/*`](./hooks/) modifica el valor de ``TOKEN_GOES_HERE`` con un ID token obtenido mediante OAuth 2.0 para la API de Inditex. Para más información [Manual de Inditex](https://developer.inditex.com/apimktplc/web/get-started/integrate-with-apis/promote-to-production).
+
+**5. Arrancar la aplicación:**
 
 ```bash
 	cd <ruta_repositorio>
@@ -80,7 +84,7 @@ Para ello, lo podremos hacer directamente desde la interfaz de GitHub o por lín
 	npm start
 ```
 
-**5. Dependencias:**
+**6. Dependencias:**
 
 Esta aplicación está desarrollada con React Native y Expo, junto con varias librerías esenciales para la interfaz, navegación y funcionalidad.
 
