@@ -2,8 +2,8 @@
 
 # <img src="https://raw.githubusercontent.com/TeenBiscuits/MandaRef/refs/heads/main/assets/images/icon.png" alt="" align="left" width="40" height="40"> **MandaRef**
 
-[![React](https://img.shields.io/badge/React_Native-20232A?logo=react&logoColor=61DAFB)](https://reactnative.dev/)
-[![Expo](https://img.shields.io/badge/Expo-1B1F23?logo=expo&logoColor=white)](https://expo.dev/)
+[![React](https://img.shields.io/badge/React_Native-20232a?logo=react&logoColor=61DAFB)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Expo-1C2024?logo=expo&logoColor=white)](https://expo.dev/)
 [![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Inditex-API](https://img.shields.io/badge/Inditex_API-black?logo=zara&logoColor=white)](https://developer.inditex.com/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
