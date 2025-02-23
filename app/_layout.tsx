@@ -39,6 +39,7 @@ export default function RootLayout() {
             name="search/[query]"
             options={{ headerShown: false }}
           />
+          <Stack.Screen name="images" options={{ headerShown: false }} />
         </Stack>
       </GlobalProvider>
     </QueryClientProvider>

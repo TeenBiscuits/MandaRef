@@ -86,13 +86,14 @@ const SearchInput: FC<SearchInputProps> = ({ initialQuery, initalBrand }) => {
 const pickerSelectStyles = StyleSheet.create({
   inputIOS: {
     height: 50,
-    width: 140,
-    flex: 1,
-    backgroundColor: "#fff",
-    borderColor: "purple",
+    width: 100,
+    textAlign: "center",
+    textAlignVertical: "center",
     color: "black",
-    borderRadius: 8,
-    borderWidth: 1,
+    borderLeftWidth: 1,
+    borderLeftColor: "#d7d4d4",
+    borderRightColor: "#d7d4d4",
+    borderRightWidth: 1,
   },
   inputAndroid: {
     height: 50,
