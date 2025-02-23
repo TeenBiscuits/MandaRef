@@ -1,3 +1,4 @@
+import arrow_back from "../assets/icons/arrow-back.png";
 import bookmark from "../assets/icons/bookmark.png";
 import bookmarkVideo from "../assets/icons/bookmarkVideo.png";
 import bookmarkVideoFull from "../assets/icons/bookmarkVideoFull.png";
@@ -38,4 +39,5 @@ export default {
   bookmarkVideo,
   bookmarkVideoFull,
   notFound,
+  arrow_back,
 };

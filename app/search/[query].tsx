@@ -17,7 +17,7 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { images } from "../../constants";
+import { icons, images } from "../../constants";
 
 const Search = () => {
   const { query, brand } = useLocalSearchParams();
@@ -42,8 +42,14 @@ const Search = () => {
         className="absolute w-full h-full"
         style={isWeb && { position: "absolute", width: "100%", height: "100%" }}
       />
-
       <SafeAreaView className="h-full" edges={["top"]}>
+        <TouchableOpacity
+          className="flex flex-row ml-4"
+          onPress={() => router.back()}
+        >
+          <Image source={icons.arrow_back} className="size-6" />
+          <Text className="text-xl font-pbold text-slate-800 ">Back</Text>
+        </TouchableOpacity>
         <FlatList
           className="flex w-full h-full mt-10 p-6 bg-white rounded-t-3xl"
           data={data}
@@ -81,40 +87,46 @@ const Search = () => {
                 <ActivityIndicator size={70} color="#94a3b8" />
               </View>
             ) : (
-              <EmptyState title="No clothes found" />
+              <View>
+                <EmptyState title="No clothes found" />
+              </View>
             )
           }
-          ListFooterComponent={() => (
-            <>
-              {!isLoading && data.length != 0 >= 0 && (
+          ListFooterComponent={() => {
+            if (!isLoading && data.length > 0) {
+              return (
                 <>
                   <View className="h-0.5 mt-8 bg-[#ebebeb] w-full" />
-                  <View className=" flex flex-row w-full h-30 mb-80 mt-10  gap-4">
+                  <View className="flex flex-row w-full h-30 mb-80 mt-10 gap-4">
+                    {/* Botón "Back" */}
                     <TouchableOpacity
                       className="flex-1 h-20 items-center justify-center bg-white rounded-2xl"
                       disabled={page === 0}
                       onPress={() => setPage(page - 1)}
                       style={styles.shadows}
                     >
-                      <Text className="text-xl font-pbold text-slate-800 ">
+                      <Text className="text-xl font-pbold text-slate-800">
                         Back
                       </Text>
                     </TouchableOpacity>
+
+                    {/* Botón "Next" */}
                     <TouchableOpacity
-                      className="flex-1 w-1/2 h-20 items-center justify-center bg-slate-800 rounded-2xl"
+                      className="flex-1 h-20 items-center justify-center bg-slate-800 rounded-2xl"
                       disabled={data.length === 0}
                       onPress={() => setPage(page + 1)}
                       style={styles.shadows}
                     >
-                      <Text className="text-xl font-pbold text-white ">
+                      <Text className="text-xl font-pbold text-white">
                         Next
                       </Text>
                     </TouchableOpacity>
                   </View>
                 </>
-              )}
-            </>
-          )}
+              );
+            }
+            return null;
+          }}
         />
       </SafeAreaView>
     </>

@@ -1,5 +1,4 @@
 import ClotheCard from "@/components/ClotheCard";
-import EmptyState from "@/components/EmptyState";
 import { useGlobalContext } from "@/hooks/useGlobalContext";
 import React from "react";
 import {
@@ -72,7 +71,9 @@ const Favourites = () => {
                 <ActivityIndicator size={70} color="#94a3b8" />
               </View>
             ) : (
-              <EmptyState title="No favourites clothes found" />
+              <View className="text-slate-500 h-80 justify-center items-center">
+                <Text>No favourites yet</Text>
+              </View>
             )
           }
           ListFooterComponent={() => {}}

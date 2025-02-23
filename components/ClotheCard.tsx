@@ -1,6 +1,7 @@
 import { useGlobalContext } from "@/hooks/useGlobalContext";
 import { FontAwesome } from "@expo/vector-icons";
 
+import { router } from "expo-router";
 import React, { FC } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { images } from "../constants";
@@ -65,8 +66,9 @@ const ClotheCard: FC<ClotheCardProps> = ({ clothe, saved }) => {
       : 0;
 
   return (
-    <View
-      className="relative justify-between w-full min-h-40 p-4  rounded-xl  bg-white  "
+    <TouchableOpacity
+      className="relative justify-between w-full min-h-40 p-4  rounded-xl  bg-white "
+      onPress={() => router.push(`/viewClothes?url=${clothe.link}`)}
       style={{
         elevation: 4,
         shadowColor: "#000",
@@ -85,14 +87,14 @@ const ClotheCard: FC<ClotheCardProps> = ({ clothe, saved }) => {
             {clothe.name}
           </Text>
           <View className="flex-row gap-2">
-            <TouchableOpacity onPress={handleOnClick}>
+            <TouchableOpacity className="px-2" onPress={handleOnClick}>
               <FontAwesome
                 name={saved ? "bookmark" : "bookmark-o"}
                 size={20}
                 color="#1e293b"
               />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity className="px-2">
               <FontAwesome name="share-square-o" size={20} color="#1e293b" />
             </TouchableOpacity>
           </View>
@@ -121,7 +123,7 @@ const ClotheCard: FC<ClotheCardProps> = ({ clothe, saved }) => {
           <Text className=" font-extrabold ">{clothe.price.currency}</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
