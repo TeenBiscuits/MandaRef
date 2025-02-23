@@ -25,6 +25,7 @@ Para ello, hemos creado una aplicación de móvil, apoyándonos en la [API de Vi
 	- [Tecnologías usadas](#tecnologías-usadas)
 	- [Autores](#autores)
 	- [Licencia](#licencia)
+		- [Disclaimer para que no nos denuncien](#disclaimer-para-que-no-nos-denuncien)
 
 ## Descripción
 
@@ -164,3 +165,7 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+### Disclaimer para que no nos denuncien
+
+Todas las imágenes de marca usadas en esta app son propiedad intelectual del grupo Inditex, MandaRef no esta vinculado de ninguna manera con el grupo Inditex. Respetamos fuertemente la propiedad intelectual corporativa.
