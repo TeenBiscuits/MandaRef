@@ -1,67 +1,79 @@
-# **MandaRef**
+![Social Image](/assets/images/SocialImage.png)
+
+# <img src="https://raw.githubusercontent.com/TeenBiscuits/MandaRef/refs/heads/main/assets/images/icon.png" alt="" align="left" width="40" height="40"> **MandaRef**
+
+> ¿Buscando una prenda 💅🏻🛍️💕 y no sabes la referencia 😭? Con una descripción o una simple captura la tienes 🤩😎.
+
 El presente proyecto surge de la idea de que los usuarios, puedan encontrar la ropa que ven en un vídeo de Tik Tok o cualquier otra red social, tan solo con una captura de pantalla o buscando por texto con una descripción ded lo que quieren. 
 Para ello, hemos creado una aplicación de móvil, apoyándonos en la [API de Visual Search de Inditex](https://developer.inditex.com/apimktplc/web/products/pubapimkt/protocols/REST/apis/visual-search/overview), en la cual, mediante una imagen o un texto, encontramos esa misma prenda y/o prendas relacionadas con ella.
 
 ## Tablas de contenidos
-- [Descripción](#descripción)
-- [Instalación](#instalación)
-- [Tecnologías usadas](#tecnologías-usadas)
-- [Autores](#autores)
-- [Licencia](#licencia)
+
+- [ **MandaRef**](#-mandaref)
+	- [Tablas de contenidos](#tablas-de-contenidos)
+	- [Descripción](#descripción)
+	- [Instalación](#instalación)
+	- [Tecnologías usadas](#tecnologías-usadas)
+	- [Autores](#autores)
+	- [Licencia](#licencia)
 
 ## Descripción
+
 La aplicación ha sido pensada para solucionar la problemática que le surge a las persona que, viendo cualquier red social o a una persona de la calle, les gusta alguna prenda de ropa que observan o el conjunto global y luego nunca llegan a saber dónde poder comprarlo. 
 Entonces, con nuestra aplicación, solucionamos el problema dando la posibilidad a los usuarios de la misma para poder encontrar todo tipo de prendas relacionadas y que así, puedan confeccionar su outfit deseado.
 
 ## Instalación
 Para la instalación del proyecto en un entorno local, necesitaremos seguir los siguientes pasos:
 
-> **1. Instalar Node.js desde la página oficial:** [Node](https://nodejs.org/es/download) o, si lo haces en Linux, puedes hacerlo de la siguiente manera: 
-> 	1. Actualizar el sistema: Primero, es una buena idea actualizar los paquetes de tu sistema. Abre una terminal y ejecuta el siguiente comando:
+**1. Instalar Node.js desde la página oficial:** [Node](https://nodejs.org/es/download) o, si lo haces en Linux, puedes hacerlo de la siguiente manera: 
+
+  1. Actualizar el sistema: Primero, es una buena idea actualizar los paquetes de tu sistema. Abre una terminal y ejecuta el siguiente comando:
 
 ```bash
 	sudo apt update
 	sudo apt upgrade
 ```
 
->	1. **Instalar Node.js usando el repositorio oficial:** Puedes instalar la última versión estable de Node.js desde los repositorios oficiales de NodeSource. Ejecuta los siguientes comandos para hacerlo:
+2. **Instalar Node.js usando el repositorio oficial:** Puedes instalar la última versión estable de Node.js desde los repositorios oficiales de NodeSource. Ejecuta los siguientes comandos para hacerlo:
 
 ```bash
-
 	curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - 
 	sudo apt install -y nodejs
 ```
 
-> 	Esto instalará Node.js y npm (el gestor de paquetes de Node.js).
+Esto instalará Node.js y npm (el gestor de paquetes de Node.js).
 
->	3. **Verificar la instalación:** Después de la instalación, puedes verificar que Node.js y npm se instalaron correctamente ejecutando:
+3. **Verificar la instalación:** Después de la instalación, puedes verificar que Node.js y npm se instalaron correctamente ejecutando:
 
 ```bash
 	node -v
 	npm -v
-	```
+```
 
-> **2. Instalar Expo Go en el móvil, para poder visualizar la aplicación o conectarse con el navegador al servidor de la aplicación en el puerto especificado:
-> 	Desde ExpoGo**: escanear el QR que se generará al arrancar la aplicación.
-> 	**Desde el navegador**: http://10.20.31.102:8081
+**2. Instalar Expo Go en el móvil, para poder visualizar la aplicación o conectarse con el navegador al servidor de la aplicación en el puerto especificado:**
 
-> **3. Clonar el repositorio de GitHub, donde está el código del proyecto:**
-> 	Para ello, lo podremos hacer directamente desde la interfaz de GitHub o por línea de comandos siguiendo los siguientes pasos:
+   1. **Desde ExpoGo**: escanear el QR que se generará al arrancar la aplicación.
+
+   2. **Desde el navegador**: http://10.20.31.102:8081
+
+**3. Clonar el repositorio de GitHub, donde está el código del proyecto:**
+Para ello, lo podremos hacer directamente desde la interfaz de GitHub o por línea de comandos siguiendo los siguientes pasos:
 
 ```bash
 	git clone https://github.com/TeenBiscuits/MandaRef.git
 ```
 
-> **4. Arrancar la aplicación:**
+**4. Arrancar la aplicación:**
 
 ```bash
 	cd <ruta_repositorio>
 	npm install
 	npm start
-	```
+```
 
-> **5. Dependencias:**
-	Esta aplicación está desarrollada con React Native y Expo, junto con varias librerías esenciales para la interfaz, navegación y funcionalidad.
+**5. Dependencias:**
+
+Esta aplicación está desarrollada con React Native y Expo, junto con varias librerías esenciales para la interfaz, navegación y funcionalidad.
 
 🔹 **Principales dependencias**:
 
