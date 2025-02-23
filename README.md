@@ -43,16 +43,16 @@ Para la instalación del proyecto en un entorno local, necesitaremos seguir los 
 	sudo apt upgrade
 ```
 
-2. **Instalar Node.js usando el repositorio oficial:** Puedes instalar la última versión estable de Node.js desde los repositorios oficiales de NodeSource. Ejecuta los siguientes comandos para hacerlo:
+  2. **Instalar Node.js usando el repositorio oficial:** Puedes instalar la última versión estable de Node.js desde los repositorios oficiales de NodeSource. Ejecuta los siguientes comandos para hacerlo:
 
 ```bash
 	curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - 
 	sudo apt install -y nodejs
 ```
 
-Esto instalará Node.js y npm (el gestor de paquetes de Node.js).
+	Esto instalará Node.js y npm (el gestor de paquetes de Node.js).
 
-3. **Verificar la instalación:** Después de la instalación, puedes verificar que Node.js y npm se instalaron correctamente ejecutando:
+  3. **Verificar la instalación:** Después de la instalación, puedes verificar que Node.js y npm se instalaron correctamente ejecutando:
 
 ```bash
 	node -v
@@ -144,6 +144,8 @@ Para la realización de del presente proyecto, hemos utilizado tres tecnologías
 - Santiago Neira Sejean - @sneiira
 
 ## Licencia
+
+> Puedes comprobar la lista completa de licencias en [LICESES](/LICENSES.txt).
 
 Copyright 2025 Nicolás Villar Philippon, Andrés Reinaldo Cid, Pablo Portas López, Santiago Neira Sejean
 
