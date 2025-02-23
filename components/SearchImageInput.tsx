@@ -3,7 +3,7 @@ import { FontAwesome } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { router } from "expo-router";
 import React, { useEffect, useState } from "react";
-import { Image, Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 
 const SearchImageInput = () => {
   const [image, setImage] = useState(null);
@@ -43,35 +43,27 @@ const SearchImageInput = () => {
     }
   }, [uploadedImageUrl]);
   return (
-    <>
-      {image && !uploadedImageUrl && (
-        <Image
-          source={{ uri: image.uri }}
-          style={{ width: 100, height: 100, marginTop: 10, borderRadius: 10 }}
-        />
-      )}
-      <TouchableOpacity
-        className=" w-full h-16 px-4 bg-[#1e293b] rounded-2xl
+    <TouchableOpacity
+      className=" w-full h-16 px-4 bg-[#1e293b] rounded-2xl
        focus:border-sky-700 items-center justify-between flex-row space-x-4 text-black-200 "
-        style={{
-          elevation: 7,
-          shadowColor: "#000",
-          shadowOffset: { width: 0, height: 2 },
-          shadowOpacity: 0.25,
-          shadowRadius: 3.84,
-        }}
-        onPress={() => openPicker("images")}
+      style={{
+        elevation: 7,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+      }}
+      onPress={() => openPicker("images")}
+    >
+      <Text
+        className="text-base text-slate-300 font-pmedium overflow-hidden"
+        numberOfLines={1}
+        ellipsizeMode="tail"
       >
-        <Text
-          className="text-base text-slate-300 font-pmedium overflow-hidden"
-          numberOfLines={1}
-          ellipsizeMode="tail"
-        >
-          Upload an image to search clothes
-        </Text>
-        <FontAwesome name="upload" size={20} color="#94a3b8" />
-      </TouchableOpacity>
-    </>
+        Upload an image to search clothes
+      </Text>
+      <FontAwesome name="upload" size={20} color="#94a3b8" />
+    </TouchableOpacity>
   );
 };
 

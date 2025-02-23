@@ -78,7 +78,7 @@ const Search = () => {
             </View>
           )}
           ListEmptyComponent={() =>
-            isLoading ? (
+            isLoading || !data ? (
               <View className="h-80 justify-center items-center">
                 <ActivityIndicator size={70} color="#94a3b8" />
               </View>
@@ -89,12 +89,11 @@ const Search = () => {
             )
           }
           ListFooterComponent={() => {
-            if (!isLoading && !data) {
+            if (!isLoading && data) {
               return (
                 <>
                   <View className="h-0.5 mt-8 bg-[#ebebeb] w-full" />
                   <View className="flex flex-row w-full h-30 mb-80 mt-10 gap-4">
-                    {/* Botón "Back" */}
                     <TouchableOpacity
                       className="flex-1 h-20 items-center justify-center bg-white rounded-2xl"
                       disabled={page === 0}
@@ -106,7 +105,6 @@ const Search = () => {
                       </Text>
                     </TouchableOpacity>
 
-                    {/* Botón "Next" */}
                     <TouchableOpacity
                       className="flex-1 h-20 items-center justify-center bg-slate-800 rounded-2xl"
                       disabled={!data}

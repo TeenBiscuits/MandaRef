@@ -16,7 +16,6 @@ export default function TabsLayout() {
         },
       }}
     >
-      ç
       <Tabs.Screen
         name="index"
         options={{

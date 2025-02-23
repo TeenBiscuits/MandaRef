@@ -45,15 +45,23 @@ export default function HomeScreen() {
             <Text className="text-4xl text-slate-800 font-bold  text-shadow-md mb-3">
               ¿Qué es MandaRef?
             </Text>
-            <Text className="text-lg font-pmedium text-slate-800 ">
-              MandaRef es una innovadora aplicación de búsqueda de ropa que te
-              permite encontrar prendas de forma rápida y sencilla. Puedes
-              buscar de dos maneras: describiendo la prenda que deseas o
-              subiendo una foto. La búsqueda por descripción te mostrará un
-              amplio catálogo de opciones en todas las marcas de Inditex,
-              mientras que la búsqueda por foto te permitirá encontrar prendas
-              similares exclusivamente en Zara.
-            </Text>
+            <View className="gap-2">
+              <Text className="text-lg font-pmedium text-slate-800 ">
+                MandaRef es una innovadora aplicación de búsqueda de ropa que te
+                permite encontrar prendas de forma rápida y sencilla. Puedes
+                buscar de dos maneras: describiendo la prenda que deseas o
+                subiendo una foto. La búsqueda por descripción te mostrará un
+                amplio catálogo de opciones en todas las marcas de Inditex,
+                mientras que la búsqueda por foto te permitirá encontrar prendas
+                similares exclusivamente en Zara.
+              </Text>
+              <Text className="text-xs text-center font-pmedium text-slate-600 ">
+                Todas las imágenes de marca usadas en esta app son propiedad
+                intelectual del grupo Inditex, MandaRef no esta vinculado de
+                ninguna manera con el grupo Inditex. Respetamos fuertemente la
+                propiedad intelectual corporativa.
+              </Text>
+            </View>
           </View>
         </View>
       </SafeAreaView>
