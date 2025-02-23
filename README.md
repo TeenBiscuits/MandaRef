@@ -1,6 +1,6 @@
 ![Social Image](/assets/images/SocialImage.png)
 
-# <img src="https://raw.githubusercontent.com/TeenBiscuits/MandaRef/refs/heads/main/assets/images/icon.png" alt="" align="left" width="45" height="40"> **MandaRef**
+# <img src="https://raw.githubusercontent.com/TeenBiscuits/MandaRef/refs/heads/main/assets/images/icon.png" alt="" align="left" width="40" height="40"> **MandaRef**
 
 > ¿Buscando una prenda 💅🏻🛍️💕 y no sabes la referencia 😭? Con una descripción o una simple captura la tienes 🤩😎.
 
