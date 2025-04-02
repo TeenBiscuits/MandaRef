@@ -144,7 +144,7 @@ Para la realización de del presente proyecto, hemos utilizado tres tecnologías
 
 ## Autores
 - Nicolás Villar Philippon - @Nicovph
-- Andrés Reinaldo Cid - @areinaldo
+- Andrés Reinaldo Cid - @areinaldo / @reinalx
 - Pablo Portas López - @TeenBiscuits
 - Santiago Neira Sejean - @sneiira
 
